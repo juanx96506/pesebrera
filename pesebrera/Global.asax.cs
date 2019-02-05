@@ -8,21 +8,12 @@ using System.Web.SessionState;
 
 namespace pesebrera
 {
-    public class Global : System.Web.HttpApplication
+    public class Global : HttpApplication
     {
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            GlobalConfiguration.Configure(config =>
-            {
-                config.MapHttpAttributeRoutes();
-
-                config.Routes.MapHttpRoute(
-                    name: "Animal",
-                    routeTemplate: "api/{controller}/{id}",
-                    defaults: new { id = RouteParameter.Optional }
-                );
-            });
+            GlobalConfiguration.Configure(WebApiConfig.Register);
         }
 
         protected void Session_Start(object sender, EventArgs e)
