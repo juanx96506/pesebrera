@@ -86,13 +86,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business\Animal.cs" />
+    <Compile Include="Business\Bovine.cs" />
+    <Compile Include="Business\Equine.cs" />
+    <Compile Include="Business\IAnimalFamily.cs" />
+    <Compile Include="Business\IAnimal.cs" />
+    <Compile Include="Business\AnimalClassifier.cs" />
+    <Compile Include="DAO\AnimalData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Persistence\FileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AnimalController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EQUINOSBOVINOS.DAT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -102,10 +113,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Business\" />
-    <Folder Include="Data\" />
-    <Folder Include="Persistence\" />
     <Folder Include="Presentation\" />
   </ItemGroup>
   <PropertyGroup>

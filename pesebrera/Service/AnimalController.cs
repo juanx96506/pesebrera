@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pesebrera.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,11 +13,13 @@ namespace pesebrera.Service
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            AnimalClassifier classifier = new AnimalClassifier();
+            var animals = classifier.ExecuteClassification();
+            return null;
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public string Get(string name)
         {
             return "value";
         }
@@ -27,12 +30,12 @@ namespace pesebrera.Service
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(string name, [FromBody]string value)
         {
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        public void Delete(string name)
         {
         }
     }

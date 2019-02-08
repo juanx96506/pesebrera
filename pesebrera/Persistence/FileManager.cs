@@ -18,15 +18,15 @@ namespace pesebrera.Persistence
                 throw new ArgumentException("Dirección del archivo invalida", "filePath");
         }
 
-        public string ReadFile()
+        public string[] ReadFile()
         {
-            string readText = File.ReadAllText(_filePath);
+            string [] readText = File.ReadAllLines(_filePath);
             return readText;
         }
 
-        public void WriteFile(string newText)
+        public void WriteFile(string[] newText)
         {
-            File.WriteAllText(_filePath, newText);
+            File.WriteAllLines(_filePath, newText);
         }
     }
 }
