@@ -11,7 +11,7 @@ namespace pesebrera.Business
 
         public bool IsFromThisFamily(IAnimal animal)
         {
-            bool isEquino = false; ;
+            bool isEquino = true;
             return isEquino;
         }
     }

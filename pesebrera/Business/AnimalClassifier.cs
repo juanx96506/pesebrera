@@ -14,8 +14,8 @@ namespace pesebrera.Business
         {
             _families = new IAnimalFamily[] 
             {
-                new Equine(),
-                new Bovine()
+                new Bovine(),
+                new Equine()
             };
         }
         public IEnumerable<IAnimal> ExecuteClassification()
