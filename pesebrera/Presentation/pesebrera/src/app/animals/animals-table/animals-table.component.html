@@ -1,0 +1,15 @@
+<table style="border: 1px solid #9E9E9E;">
+    <tbody>
+      <tr *ngFor="let animal of animals">
+        <td>{{animal.name}}</td>
+        <td *ngIf="animal.family != null">{{animal.family.name}}</td>
+        <td *ngIf="animal.family == null"></td>
+      </tr>      
+    </tbody>
+    <thead>
+      <tr>
+        <th>Familia</th>
+        <th>Animal</th>
+      </tr>
+    </thead>
+  </table>

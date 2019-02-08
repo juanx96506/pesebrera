@@ -18,7 +18,7 @@ namespace pesebrera.Business
                 new Bovine()
             };
         }
-        public IAnimal[] ExecuteClassification()
+        public IEnumerable<IAnimal> ExecuteClassification()
         {
             AnimalData animalData = new AnimalData();
             IEnumerable<IAnimal> animals = animalData.GetAllAnimals();
@@ -40,7 +40,7 @@ namespace pesebrera.Business
             animalData.SaveEquines(equines);
             animalData.SaveBovines(bovines);
 
-            return animals.ToArray();
+            return animals;
         }
         private void ClassifyAnimal(IAnimal animal)
         {
