@@ -17,16 +17,16 @@ namespace pesebrera.DAO
         public AnimalData()
         {
             allAnimalsFilePath = Path.Combine(
-                Directory.GetCurrentDirectory(), 
-                "App_Data\\EQUINOSBOVINOS.DAT"
+                System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data"), 
+                "EQUINOSBOVINOS.DAT"
                 );
             equinesFilePath = Path.Combine(
-                Directory.GetCurrentDirectory(),
-                "App_Data\\EQUINOS.DAT"
+                System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data"),
+                "EQUINOS.DAT"
                 );
             bovinesFilePath = Path.Combine(
-                Directory.GetCurrentDirectory(),
-                "App_Data\\BOVINOS.DAT"
+                System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data"),
+                "BOVINOS.DAT"
                 );
         }
 
